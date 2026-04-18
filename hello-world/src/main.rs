@@ -24,6 +24,7 @@ async fn main() -> std::io::Result<()> {
     // Create a new Actix web server
     HttpServer::new(|| {
         // Create a new Actix web application
+        // It will register Routes and share state across handlers in the same scope
         App::new()
             .service(hello) // binding hello
             .service(echo) // binding echo
